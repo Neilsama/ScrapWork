@@ -1,5 +1,6 @@
 //Rosa was here
 
+
 #include "cinder/app/App.h"
 #include "cinder/app/RendererGl.h"
 #include "cinder/gl/gl.h"
@@ -30,7 +31,7 @@ void ScrapWorkApp::update()
 
 void ScrapWorkApp::draw()
 {
-	gl::clear( Color( 0, 0, 0 ) ); 
+	gl::clear( Color( 1, 1, 1 ) );
 }
 
 CINDER_APP( ScrapWorkApp, RendererGl )

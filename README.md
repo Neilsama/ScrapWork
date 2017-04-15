@@ -1,14 +1,3 @@
-# Aaron_Cinder_Currents
+# Cinder Final by Aaron, Neil, and Rosa
 
-|Week # |Filename | Content|
-|-------|---------|--------|
-|1      |week1    |analogDigit|
-|2      |week2    |imageManipu|
-|3      |week3    |particleSys|
-|4      |WindParticles|Particles+noise|
-|5      |week5    |animation  |
-|6      |Week_6   |Video Player|
-|7      |In another repo| OSC|
-|10     |week10   |UI      |
-
-This is the repository of Aaron Lee for MFADT current class on Cinder in Spring 2017. Within this repo, you can find homework/small sketches.
+This project, ScrapWork, is an interactive installtion that allows the user to create new textiles from scraps of cloth. This project is insipred by the Scraps exhibition at the Cooper Hewitt.

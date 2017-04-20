@@ -32,6 +32,7 @@ void ScrapWorkApp::update()
 void ScrapWorkApp::draw()
 {
 	gl::clear( Color( 1, 1, 1 ) );
+    //ROSA
 }
 
 CINDER_APP( ScrapWorkApp, RendererGl )

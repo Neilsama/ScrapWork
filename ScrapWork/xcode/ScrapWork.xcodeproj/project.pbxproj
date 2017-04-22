@@ -20,6 +20,7 @@
 		2838F42F1EA9B77200C01931 /* SelectPatchPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2838F42D1EA9B77200C01931 /* SelectPatchPanel.cpp */; };
 		2838F4321EA9C92300C01931 /* Patch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2838F4301EA9C92300C01931 /* Patch.cpp */; };
 		28BAD8FD1EAA6B3700EC54EE /* PreviewPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28BAD8FB1EAA6B3700EC54EE /* PreviewPanel.cpp */; };
+		28BAD9011EAA96F200EC54EE /* button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28BAD8FF1EAA96F200EC54EE /* button.cpp */; };
 		36604132D6654B2C9BC9E476 /* poScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C686B8F837284690B8D6688E /* poScene.cpp */; };
 		45914938B26F4C1B93CCCF8F /* poTextBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 39C8FB89F95D45EE837EA9F3 /* poTextBox.cpp */; };
 		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
@@ -55,6 +56,8 @@
 		2838F4311EA9C92300C01931 /* Patch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Patch.h; path = ../src/Patch.h; sourceTree = "<group>"; };
 		28BAD8FB1EAA6B3700EC54EE /* PreviewPanel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PreviewPanel.cpp; path = ../src/PreviewPanel.cpp; sourceTree = "<group>"; };
 		28BAD8FC1EAA6B3700EC54EE /* PreviewPanel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = PreviewPanel.hpp; path = ../src/PreviewPanel.hpp; sourceTree = "<group>"; };
+		28BAD8FF1EAA96F200EC54EE /* button.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = button.cpp; path = ../src/button.cpp; sourceTree = "<group>"; };
+		28BAD9001EAA96F200EC54EE /* button.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = button.hpp; path = ../src/button.hpp; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		2A9CC62BAEAF4E79A5BE2C44 /* poEventCenter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = poEventCenter.cpp; path = ../blocks/poScene/src/poScene/poEventCenter.cpp; sourceTree = "<group>"; };
@@ -115,10 +118,9 @@
 		080E96DDFE201D6D7F000001 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				28BAD8FE1EAA6D7800EC54EE /* patch panel */,
 				B2F135D5ACBA4A85917654E3 /* ScrapWorkApp.cpp */,
-				28BAD8FB1EAA6B3700EC54EE /* PreviewPanel.cpp */,
-				28BAD8FC1EAA6B3700EC54EE /* PreviewPanel.hpp */,
+				28BAD8FE1EAA6D7800EC54EE /* patch panel */,
+				28BAD9021EAA9F3700EC54EE /* preview panel */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -167,6 +169,17 @@
 				2838F4311EA9C92300C01931 /* Patch.h */,
 			);
 			name = "patch panel";
+			sourceTree = "<group>";
+		};
+		28BAD9021EAA9F3700EC54EE /* preview panel */ = {
+			isa = PBXGroup;
+			children = (
+				28BAD8FB1EAA6B3700EC54EE /* PreviewPanel.cpp */,
+				28BAD8FC1EAA6B3700EC54EE /* PreviewPanel.hpp */,
+				28BAD8FF1EAA96F200EC54EE /* button.cpp */,
+				28BAD9001EAA96F200EC54EE /* button.hpp */,
+			);
+			name = "preview panel";
 			sourceTree = "<group>";
 		};
 		29B97314FDCFA39411CA2CEA /* ScrapWork */ = {
@@ -328,6 +341,7 @@
 				AF420A0D27D542728CD67502 /* poShape.cpp in Sources */,
 				45914938B26F4C1B93CCCF8F /* poTextBox.cpp in Sources */,
 				2838F42F1EA9B77200C01931 /* SelectPatchPanel.cpp in Sources */,
+				28BAD9011EAA96F200EC54EE /* button.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

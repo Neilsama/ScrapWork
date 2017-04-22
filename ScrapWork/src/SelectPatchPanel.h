@@ -29,18 +29,24 @@ class SelectPatchPanel
     
 public:
     static  SelectPatchPanelRef create(ci::gl::TextureRef   textureRef);
+    void    update();
+    PatchRef getPatch(int index){return mPatches[index];}
+    int     getPatchNum(){return patchNum;}
     
 private:
     SelectPatchPanel();
     void setup(ci::gl::TextureRef   textureRef);
-    
+    void onMouseEvent(po::scene::MouseEvent &event);
     
     ci::gl::TextureRef      mGridTexture;
     po::scene::ImageRef     mPGridImg;
     
+    
+    int                     patchNum;
     std::vector<PatchRef>   mPatches;
     std::vector<ci::gl::TextureRef>     mPatchesTexture;
-    int                     patchNum;
+
+    
     
 };
 

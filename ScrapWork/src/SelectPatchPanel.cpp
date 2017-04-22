@@ -18,12 +18,14 @@ SelectPatchPanelRef SelectPatchPanel::create(ci::gl::TextureRef textureRef)
     return ref;
 }
 
-SelectPatchPanel::SelectPatchPanel(){}
+SelectPatchPanel::SelectPatchPanel()
+{}
 
 void SelectPatchPanel::setup(ci::gl::TextureRef textureRef)
 {
     mGridTexture = textureRef;
     mPGridImg = po::scene::Image::create(mGridTexture);
+    addChild(mPGridImg);
     
     patchNum = 24;
     
@@ -45,8 +47,6 @@ void SelectPatchPanel::setup(ci::gl::TextureRef textureRef)
         
         PatchRef ref = Patch::create(mPatchesTexture[i]);
         
-        ref->setScale(0.5);//origin is 100px, change to 50px
-        
         mPatches.push_back(ref);
         
         //append to select Panel
@@ -59,14 +59,18 @@ void SelectPatchPanel::setup(ci::gl::TextureRef textureRef)
         else
             mPatches[i]->setPosition(ci::vec2(205 + 78*(i-12),113));
         
+        
         addChild(mPatches[i]);
     }
+   
+}
 
-    
-    
-    
-    
-    
-    addChild(mPGridImg);
+void SelectPatchPanel::update()
+{
+}
+
+
+void SelectPatchPanel::onMouseEvent(po::scene::MouseEvent &event)
+{
 }
 

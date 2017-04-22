@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include "poNodeContainer.h"
 #include "poImage.h"
+#include "button.hpp"
 
 using namespace ci;
 using namespace ci::app;
@@ -34,6 +35,8 @@ private:
     ci::gl::TextureRef      mFrameTexture;
     po::scene::ImageRef     mPFrameImg;
     po::scene::ShapeRef     mRect;
+    
+    buttonRef               btnSave;
 };
 
 

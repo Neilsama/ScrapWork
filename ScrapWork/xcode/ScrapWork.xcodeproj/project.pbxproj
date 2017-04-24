@@ -119,6 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				B2F135D5ACBA4A85917654E3 /* ScrapWorkApp.cpp */,
+				2838F4301EA9C92300C01931 /* Patch.cpp */,
+				2838F4311EA9C92300C01931 /* Patch.h */,
 				28BAD8FE1EAA6D7800EC54EE /* patch panel */,
 				28BAD9021EAA9F3700EC54EE /* preview panel */,
 			);
@@ -165,8 +167,6 @@
 			children = (
 				2838F42D1EA9B77200C01931 /* SelectPatchPanel.cpp */,
 				2838F42E1EA9B77200C01931 /* SelectPatchPanel.h */,
-				2838F4301EA9C92300C01931 /* Patch.cpp */,
-				2838F4311EA9C92300C01931 /* Patch.h */,
 			);
 			name = "patch panel";
 			sourceTree = "<group>";

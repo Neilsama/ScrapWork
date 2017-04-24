@@ -35,7 +35,7 @@ void PreviewPanel::setup(ci::gl::TextureRef frameTexture)
     mRect->setStrokeColor(ci::Color::hex(0xfefefe));
     mRect->setPosition(ci::vec2(97, 434));
     
-    btnSave = button::create(ci::gl::Texture::create(loadImage(loadAsset("btn_save.png"))));
+    btnSave = button::create(ci::gl::Texture::create(loadImage(loadAsset("btn_save.png"))),ci::gl::Texture::create(loadImage(loadAsset("btn_save_active.png"))));
     btnSave->setPosition(ci::vec2(54,640));
     
     

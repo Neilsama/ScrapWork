@@ -19,7 +19,8 @@ PatchRef Patch::create(ci::gl::TextureRef patchTexture)
 }
 
 Patch::Patch()
-:mScale(ci::vec2(0.5))
+:mScale(ci::vec2(0.5)),
+isNewOne(false)
 {}
 
 void Patch::setup(ci::gl::TextureRef patchTexture)
@@ -27,7 +28,6 @@ void Patch::setup(ci::gl::TextureRef patchTexture)
     mPatchexture = patchTexture;
     mPPatchImg = po::scene::Image::create(mPatchexture);
     mPPatchImg->setScale(normalScale);
-    
     addChild(mPPatchImg);
     
     //connect signal
@@ -40,41 +40,17 @@ void Patch::setup(ci::gl::TextureRef patchTexture)
 
 void Patch::onMouseEvent(po::scene::MouseEvent &event)
 {
-    switch (event.getType()) {
-        case po::scene::MouseEvent::DOWN_INSIDE:
-        {
-            ci::vec2    mousePos = event.getWindowPos();
-            
-            // check mouse is in grid
-            if (mousePos.y <= 180)
+//    if (isNewOne) {
+        switch (event.getType()) {
+            case po::scene::MouseEvent::DRAG_INSIDE:
             {
-                mNewPatchSignal.emit(mID);
-                cout<<"patch in grid"<<endl;
-                
-            }else if (mousePos.x >= 426 && mousePos.x <= 930 && mousePos.y >= 295 && mousePos.y <= 696)
-            {
-                cout<<"patch in canvas"<<endl;
+                mPPatchImg->setPosition(event.getLocalPos() - ci::vec2(25));
             }
-            
-            break;
-        }
-            
-        case po::scene::MouseEvent::UP_INSIDE:
-        {
-            mPPatchImg->setPosition(event.getLocalPos() - ci::vec2(25));
-            break;
-        }
-            
-        case po::scene::MouseEvent::DRAG_INSIDE:
-        {
-            mPPatchImg->setPosition(event.getLocalPos() - ci::vec2(25));
-            break;
-        }
                 
             default:
                 break;
         }
-
+    //}
     
 }
 

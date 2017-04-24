@@ -19,20 +19,33 @@ using namespace std;
 
 class button;
 typedef std::shared_ptr<button> buttonRef;
+//typedef ci::signals::Signal<void(bool state)> buttonClickedSignal;
 
 class button
 :public po::scene::NodeContainer
 {
     
 public:
-    static buttonRef  create(ci::gl::TextureRef   buttonTexture);
-    //void update();
+    static buttonRef  create(ci::gl::TextureRef buttonNormalTexture, ci::gl::TextureRef buttonActiveTexture);
+    //buttonClickedSignal& getbuttonClickedSignal(){return mButtonSignal;}
+    void onMouseEvent(po::scene::MouseEvent &event);
+    void reset();
     
 private:
     button();
-    void  setup(ci::gl::TextureRef   buttonTexture);
-    ci::gl::TextureRef      mButtonTexture;
-    po::scene::ImageRef     mPButtonImg;
+    void  setup(ci::gl::TextureRef buttonNormalTexture, ci::gl::TextureRef buttonActiveTexture);
+    ci::gl::TextureRef      mButtonNormalTexture;
+    ci::gl::TextureRef      mButtonActiveTexture;
+    po::scene::ImageRef     mPButtonNormalImg;
+    po::scene::ImageRef     mPButtonActiveImg;
+    
+    
+    //buttonClickedSignal     mButtonSignal;
+    bool                    isActive;
+
+    
+    void setActiveState();
+    void setNormalState();
 };
 
 #endif /* button_hpp */

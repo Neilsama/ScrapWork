@@ -21,32 +21,35 @@ using namespace std;
 
 class Patch;
 typedef std::shared_ptr<Patch> PatchRef;
-typedef ci::signals::Signal<void(int number)> newPatchSignal;
+typedef ci::signals::Signal<void(bool state)> PatchActiveSignal;
 
 class Patch
 :public po::scene::NodeContainer
 {
 
 public:
-    static PatchRef         create(ci::gl::TextureRef   patchTexture);
-    void                    onMouseEvent(po::scene::MouseEvent &event);
-    newPatchSignal&         getNewPatchSignal(){return mNewPatchSignal;}
-    void                    setID(int ID){mID = ID;}
-    ci::gl::TextureRef      getTexture(){return mPatchexture;}
+    static PatchRef create(ci::gl::TextureRef   patchTexture);
+    
+    //PatchActiveSignal& getPatchActiveSignal(){return mPatchActiveSignal;}
+    ci::gl::TextureRef getTexture(){return mPatchexture;}
+    void setNewOne(bool b){isNewOne = b;}
+    bool isNew(){return isNewOne;}
+    
     
 private:
     Patch();
     void  setup(ci::gl::TextureRef   patchTexture);
-    newPatchSignal          mNewPatchSignal;
-    int                     mID;
+    void  onMouseEvent(po::scene::MouseEvent &event);
     
     ci::gl::TextureRef      mPatchexture;
     po::scene::ImageRef     mPPatchImg;
+    //PatchActiveSignal       mPatchActiveSignal;
     
     ci::vec2                mScale;
     ci::vec2                normalScale = ci::vec2(0.5);
     ci::vec2                activeScale = ci::vec2(0.6);
-
+    
+    bool                    isNewOne;
 
 };
 

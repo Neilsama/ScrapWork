@@ -22,6 +22,7 @@ using namespace std;
 class Patch;
 typedef std::shared_ptr<Patch> PatchRef;
 typedef ci::signals::Signal<void(int number)> newPatchSignal;
+typedef ci::signals::Signal<void(bool state)> isInCanvasSignal;
 
 class Patch
 :public po::scene::NodeContainer
@@ -31,14 +32,20 @@ public:
     static PatchRef         create(ci::gl::TextureRef   patchTexture);
     void                    onMouseEvent(po::scene::MouseEvent &event);
     newPatchSignal&         getNewPatchSignal(){return mNewPatchSignal;}
+    isInCanvasSignal&       getIsInCavasSignal(){return mIsInCanvasSignal;}
     void                    setID(int ID){mID = ID;}
+    int                     getID(){return mID;}
+    void                    setAsNew(bool state){isNew = state;}
+    bool                    getIsNew(){return isNew;}
     ci::gl::TextureRef      getTexture(){return mPatchexture;}
     
 private:
     Patch();
     void  setup(ci::gl::TextureRef   patchTexture);
     newPatchSignal          mNewPatchSignal;
+    isInCanvasSignal        mIsInCanvasSignal;
     int                     mID;
+    bool                    isNew;
     
     ci::gl::TextureRef      mPatchexture;
     po::scene::ImageRef     mPPatchImg;

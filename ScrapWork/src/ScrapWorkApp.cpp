@@ -13,6 +13,7 @@
 #include "SelectPatchPanel.h"
 #include "Patch.h"
 #include "PreviewPanel.hpp"
+#include "Canvas.hpp"
 
 using namespace ci;
 using namespace ci::app;
@@ -27,6 +28,7 @@ class ScrapWorkApp : public App {
 	void draw() override;
     
     void generateNewPatch(int number);
+    void showOnCanvas(bool state);
     
     po::scene::SceneRef             mScence;
     po::scene::NodeContainerRef     activeContainer;
@@ -35,37 +37,34 @@ class ScrapWorkApp : public App {
     po::scene::ImageRef             bgPImg; // background image
     SelectPatchPanelRef             mSelectPatchPanel; //  select patch panel image
     PreviewPanelRef                 mPreviewPanel; //  preview panel
+    CanvasRef                          mCanvas; // canvas image
     
+    
+    std::vector<int>           patchesQueue; //all patches already add in play panel
     PatchRef                        newPatch;
-    
-    std::vector<PatchRef>           patchesQueue; //all patches already add in play panel
 };
 
 void ScrapWorkApp::setup()
 {
     ci::app::setWindowSize(1280.f, 800.f);
     
-    //  create boss container
     
-    activeContainer = po::scene::NodeContainer::create();
+    activeContainer = po::scene::NodeContainer::create();//  create boss container
     mScence = po::scene::Scene::create(activeContainer);
     
     
-    //  create background shape and load background image
-    bgPImg = po::scene::Image::create(ci::gl::Texture::create(ci::loadImage(loadAsset("bg.png"))));
+    bgPImg = po::scene::Image::create(ci::gl::Texture::create(ci::loadImage(loadAsset("bg.png"))));//  create background shape and load background image
     
+    mSelectPatchPanel = SelectPatchPanel::create(ci::gl::Texture::create(ci::loadImage(loadAsset("bg_selectGrid.png"))));//  create select patch panel
+    //mSelectPatchPanel->setInteractionEnabled(true);
     
-    //  create select patch panel
-    mSelectPatchPanel = SelectPatchPanel::create(ci::gl::Texture::create(ci::loadImage(loadAsset("bg_selectGrid.png"))));
-    mSelectPatchPanel->setInteractionEnabled(true);
-    
-    //  create preview panel
-    mPreviewPanel = PreviewPanel::create(ci::gl::Texture::create(ci::loadImage(loadAsset("bg_preview.png"))));
-    
+    mPreviewPanel = PreviewPanel::create(ci::gl::Texture::create(ci::loadImage(loadAsset("bg_preview.png")))); //  create preview panel
+    mCanvas = Canvas::create(ci::gl::Texture::create(ci::loadImage(loadAsset("bg_canvas.png")))); //  create canvas
     
     activeContainer->addChild(bgPImg);
     activeContainer->addChild(mSelectPatchPanel);
     activeContainer->addChild(mPreviewPanel);
+    activeContainer->addChild(mCanvas);
     
     // connect signal;
     for (int i = 0; i<mSelectPatchPanel->getPatchNum(); i++) {
@@ -76,10 +75,39 @@ void ScrapWorkApp::setup()
 
 void ScrapWorkApp::generateNewPatch(int number)
 {
+    cout<<"generate a new patch"<<endl;
     newPatch = Patch::create(mSelectPatchPanel->getPatch(number)->getTexture());
     newPatch->setPosition(mSelectPatchPanel->getPatch(number)->getPosition()-ci::vec2(-10));
+    newPatch->setAsNew(true);
     activeContainer->addChild(newPatch);
+    
+    newPatch->getIsInCavasSignal().connect(std::bind(&ScrapWorkApp::showOnCanvas, this,std::placeholders::_1));
 
+}
+
+void ScrapWorkApp::showOnCanvas(bool state)
+{
+    if (state) {
+        if(newPatch->getIsNew()){
+            patchesQueue.push_back(newPatch->getID());
+            activeContainer->removeChild(newPatch);
+            mCanvas->addChild(newPatch);
+            cout<<"add a new patch:"<<newPatch->getID()<<endl;
+            cout<<" now the size of patch queue is: "<<patchesQueue.size()<<endl;
+            //cout<<"showOnCanvas signal state : "<<state<<endl;
+        }
+        else
+            cout<<"still the patch in canvas"<<endl;
+    }else{
+        //cout<<"out of canvas"<<endl;
+        if(newPatch->getIsNew())
+            activeContainer->removeChild(newPatch);
+        else
+            mCanvas->removeChild(newPatch);
+        
+        cout<<"removed child"<<endl;
+    }
+    
 }
 
 void ScrapWorkApp::mouseDown( MouseEvent event )

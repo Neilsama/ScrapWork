@@ -36,7 +36,7 @@ void PreviewPanel::setup(ci::gl::TextureRef frameTexture)
     mRect->setPosition(ci::vec2(97, 434));
     
     btnSave = button::create(ci::gl::Texture::create(loadImage(loadAsset("btn_save.png"))),ci::gl::Texture::create(loadImage(loadAsset("btn_save_active.png"))));
-    btnSave->setPosition(ci::vec2(54,640));
+    btnSave->setPosition(ci::vec2(54,650));
     
     
     addChild(mPFrameImg);

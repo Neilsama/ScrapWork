@@ -19,6 +19,7 @@
 		00B9955B1B128DF400A5C623 /* IOSurface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B995591B128DF400A5C623 /* IOSurface.framework */; };
 		2838F42F1EA9B77200C01931 /* SelectPatchPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2838F42D1EA9B77200C01931 /* SelectPatchPanel.cpp */; };
 		2838F4321EA9C92300C01931 /* Patch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2838F4301EA9C92300C01931 /* Patch.cpp */; };
+		288B19BF1EAE922800FC8E06 /* Canvas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 288B19BD1EAE922800FC8E06 /* Canvas.cpp */; };
 		28BAD8FD1EAA6B3700EC54EE /* PreviewPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28BAD8FB1EAA6B3700EC54EE /* PreviewPanel.cpp */; };
 		28BAD9011EAA96F200EC54EE /* button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28BAD8FF1EAA96F200EC54EE /* button.cpp */; };
 		36604132D6654B2C9BC9E476 /* poScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C686B8F837284690B8D6688E /* poScene.cpp */; };
@@ -54,6 +55,8 @@
 		2838F42E1EA9B77200C01931 /* SelectPatchPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelectPatchPanel.h; path = ../src/SelectPatchPanel.h; sourceTree = "<group>"; };
 		2838F4301EA9C92300C01931 /* Patch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Patch.cpp; path = ../src/Patch.cpp; sourceTree = "<group>"; };
 		2838F4311EA9C92300C01931 /* Patch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Patch.h; path = ../src/Patch.h; sourceTree = "<group>"; };
+		288B19BD1EAE922800FC8E06 /* Canvas.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Canvas.cpp; path = ../src/Canvas.cpp; sourceTree = "<group>"; };
+		288B19BE1EAE922800FC8E06 /* Canvas.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Canvas.hpp; path = ../src/Canvas.hpp; sourceTree = "<group>"; };
 		28BAD8FB1EAA6B3700EC54EE /* PreviewPanel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PreviewPanel.cpp; path = ../src/PreviewPanel.cpp; sourceTree = "<group>"; };
 		28BAD8FC1EAA6B3700EC54EE /* PreviewPanel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = PreviewPanel.hpp; path = ../src/PreviewPanel.hpp; sourceTree = "<group>"; };
 		28BAD8FF1EAA96F200EC54EE /* button.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = button.cpp; path = ../src/button.cpp; sourceTree = "<group>"; };
@@ -121,6 +124,7 @@
 				B2F135D5ACBA4A85917654E3 /* ScrapWorkApp.cpp */,
 				2838F4301EA9C92300C01931 /* Patch.cpp */,
 				2838F4311EA9C92300C01931 /* Patch.h */,
+				288B19BC1EAE920B00FC8E06 /* canvas */,
 				28BAD8FE1EAA6D7800EC54EE /* patch panel */,
 				28BAD9021EAA9F3700EC54EE /* preview panel */,
 			);
@@ -160,6 +164,15 @@
 				8D1107320486CEB800E47090 /* ScrapWork.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		288B19BC1EAE920B00FC8E06 /* canvas */ = {
+			isa = PBXGroup;
+			children = (
+				288B19BD1EAE922800FC8E06 /* Canvas.cpp */,
+				288B19BE1EAE922800FC8E06 /* Canvas.hpp */,
+			);
+			name = canvas;
 			sourceTree = "<group>";
 		};
 		28BAD8FE1EAA6D7800EC54EE /* patch panel */ = {
@@ -330,6 +343,7 @@
 			files = (
 				53BFE5E24C2A4D3390A2DCC0 /* ScrapWorkApp.cpp in Sources */,
 				007503DF0DD5425291E60EBA /* poEventCenter.cpp in Sources */,
+				288B19BF1EAE922800FC8E06 /* Canvas.cpp in Sources */,
 				D14F8F8D8874414BB609C55D /* poEvents.cpp in Sources */,
 				28BAD8FD1EAA6B3700EC54EE /* PreviewPanel.cpp in Sources */,
 				D6D377C1114D4D489FF9EB68 /* poImage.cpp in Sources */,

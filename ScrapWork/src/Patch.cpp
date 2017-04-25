@@ -20,6 +20,7 @@ PatchRef Patch::create(ci::gl::TextureRef patchTexture)
 
 Patch::Patch()
 :mScale(ci::vec2(0.5))
+,isNew(false)
 {}
 
 void Patch::setup(ci::gl::TextureRef patchTexture)
@@ -40,20 +41,20 @@ void Patch::setup(ci::gl::TextureRef patchTexture)
 
 void Patch::onMouseEvent(po::scene::MouseEvent &event)
 {
+    ci::vec2    mousePos = event.getWindowPos();
     switch (event.getType()) {
         case po::scene::MouseEvent::DOWN_INSIDE:
         {
-            ci::vec2    mousePos = event.getWindowPos();
-            
             // check mouse is in grid
             if (mousePos.y <= 180)
             {
                 mNewPatchSignal.emit(mID);
-                cout<<"patch in grid"<<endl;
+                //cout<<"patch in grid"<<endl;
                 
             }else if (mousePos.x >= 426 && mousePos.x <= 930 && mousePos.y >= 295 && mousePos.y <= 696)
             {
-                cout<<"patch in canvas"<<endl;
+                isNew = false;
+                //cout<<"patch in canvas"<<endl;
             }
             
             break;
@@ -61,8 +62,17 @@ void Patch::onMouseEvent(po::scene::MouseEvent &event)
             
         case po::scene::MouseEvent::UP_INSIDE:
         {
-            mPPatchImg->setPosition(event.getLocalPos() - ci::vec2(25));
+            if (mousePos.x >= 426 && mousePos.x <= 930 && mousePos.y >= 295 && mousePos.y <= 696)
+            {
+                mIsInCanvasSignal.emit(true);
+                //cout<<"released in canvas"<<endl;
+            }
+            else{
+                mIsInCanvasSignal.emit(false);
+                //cout<<"released out of canvas"<<endl;
+            }
             break;
+        
         }
             
         case po::scene::MouseEvent::DRAG_INSIDE:

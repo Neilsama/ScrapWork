@@ -17,6 +17,12 @@
 		00B784B60FF439BC000DE1D7 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B20FF439BC000DE1D7 /* CoreAudio.framework */; };
 		00B9955A1B128DF400A5C623 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B995581B128DF400A5C623 /* IOKit.framework */; };
 		00B9955B1B128DF400A5C623 /* IOSurface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B995591B128DF400A5C623 /* IOSurface.framework */; };
+<<<<<<< HEAD
+=======
+		2838F42F1EA9B77200C01931 /* SelectPatchPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2838F42D1EA9B77200C01931 /* SelectPatchPanel.cpp */; };
+		2838F4321EA9C92300C01931 /* Patch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2838F4301EA9C92300C01931 /* Patch.cpp */; };
+		28BAD8FD1EAA6B3700EC54EE /* PreviewPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28BAD8FB1EAA6B3700EC54EE /* PreviewPanel.cpp */; };
+>>>>>>> b9d54228490a5825cc2231d6795f5fbf7e5bf42a
 		36604132D6654B2C9BC9E476 /* poScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C686B8F837284690B8D6688E /* poScene.cpp */; };
 		45914938B26F4C1B93CCCF8F /* poTextBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 39C8FB89F95D45EE837EA9F3 /* poTextBox.cpp */; };
 		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
@@ -46,6 +52,15 @@
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		1D92428A36D64633830AA71C /* Resources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Resources.h; path = ../include/Resources.h; sourceTree = "<group>"; };
 		209B432F0AE048989F0E84A8 /* ScrapWork_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; path = ScrapWork_Prefix.pch; sourceTree = "<group>"; };
+<<<<<<< HEAD
+=======
+		2838F42D1EA9B77200C01931 /* SelectPatchPanel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SelectPatchPanel.cpp; path = ../src/SelectPatchPanel.cpp; sourceTree = "<group>"; };
+		2838F42E1EA9B77200C01931 /* SelectPatchPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelectPatchPanel.h; path = ../src/SelectPatchPanel.h; sourceTree = "<group>"; };
+		2838F4301EA9C92300C01931 /* Patch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Patch.cpp; path = ../src/Patch.cpp; sourceTree = "<group>"; };
+		2838F4311EA9C92300C01931 /* Patch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Patch.h; path = ../src/Patch.h; sourceTree = "<group>"; };
+		28BAD8FB1EAA6B3700EC54EE /* PreviewPanel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PreviewPanel.cpp; path = ../src/PreviewPanel.cpp; sourceTree = "<group>"; };
+		28BAD8FC1EAA6B3700EC54EE /* PreviewPanel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = PreviewPanel.hpp; path = ../src/PreviewPanel.hpp; sourceTree = "<group>"; };
+>>>>>>> b9d54228490a5825cc2231d6795f5fbf7e5bf42a
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		2A9CC62BAEAF4E79A5BE2C44 /* poEventCenter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = poEventCenter.cpp; path = ../blocks/poScene/src/poScene/poEventCenter.cpp; sourceTree = "<group>"; };
@@ -106,7 +121,10 @@
 		080E96DDFE201D6D7F000001 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				28BAD8FE1EAA6D7800EC54EE /* patch panel */,
 				B2F135D5ACBA4A85917654E3 /* ScrapWorkApp.cpp */,
+				28BAD8FB1EAA6B3700EC54EE /* PreviewPanel.cpp */,
+				28BAD8FC1EAA6B3700EC54EE /* PreviewPanel.hpp */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -144,6 +162,17 @@
 				8D1107320486CEB800E47090 /* ScrapWork.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		28BAD8FE1EAA6D7800EC54EE /* patch panel */ = {
+			isa = PBXGroup;
+			children = (
+				2838F42D1EA9B77200C01931 /* SelectPatchPanel.cpp */,
+				2838F42E1EA9B77200C01931 /* SelectPatchPanel.h */,
+				2838F4301EA9C92300C01931 /* Patch.cpp */,
+				2838F4311EA9C92300C01931 /* Patch.h */,
+			);
+			name = "patch panel";
 			sourceTree = "<group>";
 		};
 		29B97314FDCFA39411CA2CEA /* ScrapWork */ = {
@@ -295,13 +324,16 @@
 				53BFE5E24C2A4D3390A2DCC0 /* ScrapWorkApp.cpp in Sources */,
 				007503DF0DD5425291E60EBA /* poEventCenter.cpp in Sources */,
 				D14F8F8D8874414BB609C55D /* poEvents.cpp in Sources */,
+				28BAD8FD1EAA6B3700EC54EE /* PreviewPanel.cpp in Sources */,
 				D6D377C1114D4D489FF9EB68 /* poImage.cpp in Sources */,
 				CC5843FED3714ADDB3C09759 /* poMatrixSet.cpp in Sources */,
 				9D1CE81BA330459F80181AF1 /* poNode.cpp in Sources */,
+				2838F4321EA9C92300C01931 /* Patch.cpp in Sources */,
 				7CA9A599A8F445E290C3BFE6 /* poNodeContainer.cpp in Sources */,
 				36604132D6654B2C9BC9E476 /* poScene.cpp in Sources */,
 				AF420A0D27D542728CD67502 /* poShape.cpp in Sources */,
 				45914938B26F4C1B93CCCF8F /* poTextBox.cpp in Sources */,
+				2838F42F1EA9B77200C01931 /* SelectPatchPanel.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

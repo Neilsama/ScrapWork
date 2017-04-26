@@ -77,8 +77,14 @@ void ScrapWorkApp::generateNewPatch(int number)
 {
     cout<<"generate a new patch"<<endl;
     newPatch = Patch::create(mSelectPatchPanel->getPatch(number)->getTexture());
-    newPatch->setPosition(mSelectPatchPanel->getPatch(number)->getPosition()-ci::vec2(-10));
+    newPatch->setAlpha(0.f);
+//    newPatch->setPosition(mSelectPatchPanel->getPatch(number)->getPosition()-ci::vec2(-10));
+    ci::app::timeline().apply(&newPatch->getPositionAnim(), mSelectPatchPanel->getPatch(number)->getPosition(), mSelectPatchPanel->getPatch(number)->getPosition()-ci::vec2(-10), 0.2f, EaseInAtan());
+     ci::app::timeline().apply(&newPatch->getAlphaAnim(), 0.f, 1.f, 0.2f, EaseInAtan());
+    ci::app::timeline().apply(&newPatch->getScaleAnim(), ci::vec2(0.f), ci::vec2(2.f), 0.2f, EaseInAtan());
+   
     newPatch->setAsNew(true);
+    newPatch->setID(mSelectPatchPanel->getPatchNum()+patchesQueue.size()+1);
     activeContainer->addChild(newPatch);
     
     newPatch->getIsInCavasSignal().connect(std::bind(&ScrapWorkApp::showOnCanvas, this,std::placeholders::_1));

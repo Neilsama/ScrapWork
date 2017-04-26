@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+/Users/pikkiri/Documents/cinder_0.9.0_mac/ScrapWork/ScrapWork/xcode/build/ScrapWork.build/Debug/ScrapWork.build/Objects-normal/x86_64/ScrapWorkApp.o
+/Users/pikkiri/Documents/cinder_0.9.0_mac/ScrapWork/ScrapWork/xcode/build/ScrapWork.build/Debug/ScrapWork.build/Objects-normal/x86_64/poEventCenter.o
+/Users/pikkiri/Documents/cinder_0.9.0_mac/ScrapWork/ScrapWork/xcode/build/ScrapWork.build/Debug/ScrapWork.build/Objects-normal/x86_64/poEvents.o
+/Users/pikkiri/Documents/cinder_0.9.0_mac/ScrapWork/ScrapWork/xcode/build/ScrapWork.build/Debug/ScrapWork.build/Objects-normal/x86_64/poImage.o
+/Users/pikkiri/Documents/cinder_0.9.0_mac/ScrapWork/ScrapWork/xcode/build/ScrapWork.build/Debug/ScrapWork.build/Objects-normal/x86_64/poMatrixSet.o
+/Users/pikkiri/Documents/cinder_0.9.0_mac/ScrapWork/ScrapWork/xcode/build/ScrapWork.build/Debug/ScrapWork.build/Objects-normal/x86_64/poNode.o
+/Users/pikkiri/Documents/cinder_0.9.0_mac/ScrapWork/ScrapWork/xcode/build/ScrapWork.build/Debug/ScrapWork.build/Objects-normal/x86_64/poNodeContainer.o
+/Users/pikkiri/Documents/cinder_0.9.0_mac/ScrapWork/ScrapWork/xcode/build/ScrapWork.build/Debug/ScrapWork.build/Objects-normal/x86_64/poScene.o
+/Users/pikkiri/Documents/cinder_0.9.0_mac/ScrapWork/ScrapWork/xcode/build/ScrapWork.build/Debug/ScrapWork.build/Objects-normal/x86_64/poShape.o
+/Users/pikkiri/Documents/cinder_0.9.0_mac/ScrapWork/ScrapWork/xcode/build/ScrapWork.build/Debug/ScrapWork.build/Objects-normal/x86_64/poTextBox.o
+=======
 /Users/Neil/Desktop/cinder_0.9.0_mac/ScrapWork/ScrapWork/xcode/build/ScrapWork.build/Debug/ScrapWork.build/Objects-normal/x86_64/ScrapWorkApp.o
 /Users/Neil/Desktop/cinder_0.9.0_mac/ScrapWork/ScrapWork/xcode/build/ScrapWork.build/Debug/ScrapWork.build/Objects-normal/x86_64/poEventCenter.o
 /Users/Neil/Desktop/cinder_0.9.0_mac/ScrapWork/ScrapWork/xcode/build/ScrapWork.build/Debug/ScrapWork.build/Objects-normal/x86_64/poEvents.o
@@ -11,3 +23,4 @@
 /Users/Neil/Desktop/cinder_0.9.0_mac/ScrapWork/ScrapWork/xcode/build/ScrapWork.build/Debug/ScrapWork.build/Objects-normal/x86_64/poShape.o
 /Users/Neil/Desktop/cinder_0.9.0_mac/ScrapWork/ScrapWork/xcode/build/ScrapWork.build/Debug/ScrapWork.build/Objects-normal/x86_64/poTextBox.o
 /Users/Neil/Desktop/cinder_0.9.0_mac/ScrapWork/ScrapWork/xcode/build/ScrapWork.build/Debug/ScrapWork.build/Objects-normal/x86_64/SelectPatchPanel.o
+>>>>>>> b9d54228490a5825cc2231d6795f5fbf7e5bf42a

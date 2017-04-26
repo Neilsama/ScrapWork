@@ -17,9 +17,12 @@
 		00B784B60FF439BC000DE1D7 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B20FF439BC000DE1D7 /* CoreAudio.framework */; };
 		00B9955A1B128DF400A5C623 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B995581B128DF400A5C623 /* IOKit.framework */; };
 		00B9955B1B128DF400A5C623 /* IOSurface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B995591B128DF400A5C623 /* IOSurface.framework */; };
+<<<<<<< HEAD
+=======
 		2838F42F1EA9B77200C01931 /* SelectPatchPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2838F42D1EA9B77200C01931 /* SelectPatchPanel.cpp */; };
 		2838F4321EA9C92300C01931 /* Patch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2838F4301EA9C92300C01931 /* Patch.cpp */; };
 		28BAD8FD1EAA6B3700EC54EE /* PreviewPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28BAD8FB1EAA6B3700EC54EE /* PreviewPanel.cpp */; };
+>>>>>>> b9d54228490a5825cc2231d6795f5fbf7e5bf42a
 		36604132D6654B2C9BC9E476 /* poScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C686B8F837284690B8D6688E /* poScene.cpp */; };
 		45914938B26F4C1B93CCCF8F /* poTextBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 39C8FB89F95D45EE837EA9F3 /* poTextBox.cpp */; };
 		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
@@ -49,12 +52,15 @@
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		1D92428A36D64633830AA71C /* Resources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Resources.h; path = ../include/Resources.h; sourceTree = "<group>"; };
 		209B432F0AE048989F0E84A8 /* ScrapWork_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; path = ScrapWork_Prefix.pch; sourceTree = "<group>"; };
+<<<<<<< HEAD
+=======
 		2838F42D1EA9B77200C01931 /* SelectPatchPanel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SelectPatchPanel.cpp; path = ../src/SelectPatchPanel.cpp; sourceTree = "<group>"; };
 		2838F42E1EA9B77200C01931 /* SelectPatchPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelectPatchPanel.h; path = ../src/SelectPatchPanel.h; sourceTree = "<group>"; };
 		2838F4301EA9C92300C01931 /* Patch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Patch.cpp; path = ../src/Patch.cpp; sourceTree = "<group>"; };
 		2838F4311EA9C92300C01931 /* Patch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Patch.h; path = ../src/Patch.h; sourceTree = "<group>"; };
 		28BAD8FB1EAA6B3700EC54EE /* PreviewPanel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PreviewPanel.cpp; path = ../src/PreviewPanel.cpp; sourceTree = "<group>"; };
 		28BAD8FC1EAA6B3700EC54EE /* PreviewPanel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = PreviewPanel.hpp; path = ../src/PreviewPanel.hpp; sourceTree = "<group>"; };
+>>>>>>> b9d54228490a5825cc2231d6795f5fbf7e5bf42a
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		2A9CC62BAEAF4E79A5BE2C44 /* poEventCenter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = poEventCenter.cpp; path = ../blocks/poScene/src/poScene/poEventCenter.cpp; sourceTree = "<group>"; };
@@ -337,6 +343,7 @@
 		C01FCF4B08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CINDER_PATH = ../../..;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
@@ -363,6 +370,7 @@
 		C01FCF4C08A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CINDER_PATH = ../../..;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
